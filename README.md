@@ -57,3 +57,15 @@ node-gyp --arch=arm rebuild
 tar cvf  hello.tar build/
 
 ```
+
+### Step 4
+下面要进行插件编译
+```
+安装nan： npm install -save nan
+拿node-addon-examples做测试
+npm install
+node-gyp --arch=arm rebuild
+
+tar cvf  hello.tar build/
+
+```
