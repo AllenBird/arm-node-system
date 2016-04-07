@@ -36,15 +36,15 @@ export AR=arm-none-linux-gnueabi-ar
 export CC=arm-none-linux-gnueabi-gcc
 export CXX=arm-none-linux-gnueabi-g++
 export LINK=arm-none-linux-gnueabi-g++
-export CCFLAGS="-march=armv7-a -mtune=cortex-a5 -mfpu=vfpv4 -mfloat-abi=soft "
-export CXXFLAGS="-march=armv7-a -mtune=cortex-a5 -mfpu=vfpv4 -mfloat-abi=soft "
+export CCFLAGS="-march=armv7-a -mtune=cortex-a5 -mfpu=vfpv4 -mfloat-abi=soft"
+export CXXFLAGS="-march=armv7-a -mtune=cortex-a5 -mfpu=vfpv4 -mfloat-abi=soft"
 
 ./configure --without-snapshot --dest-cpu=arm --dest-os=linux --with-arm-float-abi=soft --without-ssl
 make
 make install DESTDIR=~/arm-node/
 ```
 然后到把 ~/arm-node 
-tar cvf /arm-node arm-node.tar
+tar cvf arm-node.tar arm-node
 tftp 到arm上 /usr/local 下
 tar xvf arm-node.tar
   
