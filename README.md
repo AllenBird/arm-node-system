@@ -36,8 +36,9 @@ export AR=arm-none-linux-gnueabi-ar
 export CC=arm-none-linux-gnueabi-gcc
 export CXX=arm-none-linux-gnueabi-g++
 export LINK=arm-none-linux-gnueabi-g++
-export CCFLAGS="-march=armv7-a -mtune=cortex-a5 -mfpu=vfpv4 -mfloat-abi=soft"
-export CXXFLAGS="-march=armv7-a -mtune=cortex-a5 -mfpu=vfpv4 -mfloat-abi=soft"
+export CCFLAGS="-static -march=armv7-a -mtune=cortex-a5 -mfpu=vfpv4 -mfloat-abi=soft"
+export CXXFLAGS="-static -march=armv7-a -mtune=cortex-a5 -mfpu=vfpv4 -mfloat-abi=soft"
+export LDFLAGS="-static"
 
 ./configure --without-snapshot --dest-cpu=arm --dest-os=linux --with-arm-float-abi=soft --without-ssl
 make
