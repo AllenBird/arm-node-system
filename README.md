@@ -40,7 +40,7 @@ export CCFLAGS="-static -march=armv7-a -mtune=cortex-a5 -mfpu=vfpv4 -mfloat-abi=
 export CXXFLAGS="-static -march=armv7-a -mtune=cortex-a5 -mfpu=vfpv4 -mfloat-abi=soft"
 export LDFLAGS="-static"
 
-./configure --without-snapshot --dest-cpu=arm --dest-os=linux --with-arm-float-abi=soft --without-ssl
+./configure --without-snapshot --dest-cpu=arm --dest-os=linux --with-arm-float-abi=soft
 make
 make install DESTDIR=~/arm-node/
 ```
