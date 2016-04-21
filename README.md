@@ -16,7 +16,7 @@ Python 2.7.6
 root@ubuntu:/# cat /proc/version
 Linux version 3.13.0-24-generic (buildd@roseapple) (gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) ) #46-Ubuntu SMP Thu Apr 10 19:08:14 UTC 2014
 root@ubuntu:/# node --version
-v0.10.42
+v0.10.42 // 后来改成了v0.11.12
 root@ubuntu:/# npm --version
 1.4.29
 root@ubuntu:/# node-gyp --version
@@ -42,13 +42,13 @@ export LDFLAGS="-static"
 
 ./configure --without-snapshot --dest-cpu=arm --dest-os=linux --with-arm-float-abi=soft
 make
-make install DESTDIR=~/arm-node/
+make install DESTDIR=./arm-node/
 ```
 然后到把 ~/arm-node 
 tar cvf arm-node.tar arm-node
 tftp 到arm上 /usr/local 下
 tar xvf arm-node.tar
-  
+切记将压缩包里的bin等文件放在linux的/usr/local 下（压缩包里自己就有/usr/local 这两层目录就不要了，不然npm会有问题）
 ### Step 3
 下面要进行插件编译
 ```
@@ -57,18 +57,11 @@ tar xvf arm-node.tar
 npm install
 node-gyp --arch=arm rebuild
 
-tar cvf  hello.tar build/
-
 ```
 
 ### Step 4
-下面要进行插件编译
-```
-安装nan： npm install -save nan
-拿node-addon-examples做测试
-npm install
-node-gyp --arch=arm rebuild
 
-tar cvf  hello.tar build/
+```
+
 
 ```
