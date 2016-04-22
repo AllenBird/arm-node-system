@@ -61,6 +61,6 @@ node-gyp --arch=arm rebuild
 ### Step 4
 
 ```
-
+  需要在arm的home路径下mkdir root，这样npm才能工作。
 
 ```
