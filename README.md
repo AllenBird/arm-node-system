@@ -62,5 +62,7 @@ node-gyp --arch=arm rebuild
 
 ```
   需要在arm的home路径下mkdir root，这样npm才能工作。
-
+  如果node有ssl功能，npm的时候可以把npm关掉
+  npm config set strict-ssl false
+  否则会失败。
 ```
