@@ -16,7 +16,7 @@ Python 2.7.6
 root@ubuntu:/# cat /proc/version
 Linux version 3.13.0-24-generic (buildd@roseapple) (gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) ) #46-Ubuntu SMP Thu Apr 10 19:08:14 UTC 2014
 root@ubuntu:/# node --version
-v0.10.42 // 后来改成了v0.11.12
+v0.10.42
 root@ubuntu:/# npm --version
 1.4.29
 root@ubuntu:/# node-gyp --version
