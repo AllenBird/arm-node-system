@@ -54,8 +54,8 @@ tar xvf arm-node.tar
 安装nan： npm install -save nan
 拿node-addon-examples做测试
 npm install
+node-gyp --arch=arm configure
 node-gyp --arch=arm rebuild
-
 ```
 
 ### Step 4
